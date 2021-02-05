@@ -1,0 +1,14 @@
+<Messages>
+  <Languages>
+    <Language>ar</Language>
+    <Language>en</Language>
+  </Languages>
+  <Message Code="ECom500ISE" Name="InternalServerError" Status="InternalServerError">
+    <ar>حدث خطأ في السيرفر.</ar>
+    <en>Unknown error in server.</en>
+  </Message>
+  <Message Code="ECom400CNR" Name="CategoryNameRequired" Status="BadRequest">
+    <ar>اسم الصنف مطلوب.</ar>
+    <en>Category name required.</en>
+  </Message>
+</Messages>
