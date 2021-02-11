@@ -19,6 +19,9 @@ namespace ECommerce.Infrastructure.Mapping
             builder.Property(c => c.Picture).IsRequired(false).HasColumnName("Picture");
             builder.Property(c => c.Ranking).IsRequired(true).HasColumnName("Ranking").HasDefaultValue(0);
             builder.Property(c => c.Note).IsRequired(false).HasColumnName("Note");
+            builder.HasOne(d => d.Category)
+                    .WithMany(p => p.Items)
+                    .HasForeignKey(d => d.CategoryId);
 
             base.Configure(builder);
             builder.ToTable("Items");

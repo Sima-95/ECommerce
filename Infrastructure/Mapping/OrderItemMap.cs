@@ -14,7 +14,12 @@ namespace ECommerce.Infrastructure.Mapping
             builder.Property(c => c.Quantity).IsRequired(true).HasColumnName("Quantity").HasDefaultValue(1);
             builder.Property(c => c.PricePerUnit).IsRequired(true).HasColumnName("PricePerUnit");
             builder.Property(c => c.Total).IsRequired(true).HasColumnName("Total");
-
+            builder.HasOne(d => d.Order)
+                    .WithMany(p => p.OrderItems)
+                    .HasForeignKey(d => d.OrderId);
+            builder.HasOne(d => d.Item)
+                    .WithMany(p => p.OrderItems)
+                    .HasForeignKey(d => d.ItemId);
             base.Configure(builder);
             builder.ToTable("OrderItems");
         }

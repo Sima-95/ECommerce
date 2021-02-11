@@ -9,11 +9,14 @@ namespace ECommerce.Infrastructure.DataModel
         public CategoryDto()
         {
             Items = new HashSet<ItemDto>();
+            _Children = new HashSet<CategoryDto>();
         }
 
         public string Name { get; set; }
         public string Description { get; set; }
         public Guid? Parent { get; set; }
         public virtual ICollection<ItemDto> Items { get; set; }
+        public virtual CategoryDto _Parent { get; set; }
+        public virtual ICollection<CategoryDto> _Children { get; set; }
     }
 }

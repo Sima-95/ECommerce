@@ -1,7 +1,8 @@
-﻿using StoreakApiService.Core.Attributes;
+﻿using ECommerce.Models.Queries.Category;
+using StoreakApiService.Core.Attributes;
 using System;
 
-namespace ECommerce.Models.Category
+namespace ECommerce.Models.BusinessUseCases.Category
 {
     public class CreateCategoryModel
     {
@@ -9,5 +10,6 @@ namespace ECommerce.Models.Category
         public string Name { get; set; }
         public string Description { get; set; }
         public Guid? Parent { get; set; }
+        public virtual GetCategoryModel _Parent { get; set; }
     }
 }

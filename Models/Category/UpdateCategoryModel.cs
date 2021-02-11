@@ -1,7 +1,7 @@
 ﻿using StoreakApiService.Core.Attributes;
 using System;
 
-namespace ECommerce.Models.Category
+namespace ECommerce.Models.BusinessUseCases.Category
 {
     public class UpdateCategoryModel
     {

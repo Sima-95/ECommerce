@@ -12,6 +12,9 @@ namespace ECommerce.Infrastructure.Mapping
             builder.Property(c => c.Name).IsRequired(true).HasColumnName("Name");
             builder.Property(c => c.Description).IsRequired(false).HasColumnName("Description");
             builder.Property(c => c.Parent).IsRequired(false).HasColumnName("Parent");
+            builder.HasOne(d => d._Parent)
+                    .WithMany(p => p._Children)
+                    .HasForeignKey(d => d.Parent);
 
             base.Configure(builder);
             builder.ToTable("Categories");

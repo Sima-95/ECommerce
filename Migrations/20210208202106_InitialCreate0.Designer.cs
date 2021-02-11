@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerce.Migrations
 {
     [DbContext(typeof(ModelContext))]
-    [Migration("20210205013817_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210208202106_InitialCreate0")]
+    partial class InitialCreate0
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -56,6 +56,8 @@ namespace ECommerce.Migrations
                     b.Property<long>("StoreId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Parent");
 
                     b.ToTable("Categories");
                 });
@@ -227,6 +229,13 @@ namespace ECommerce.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("OrderItems");
+                });
+
+            modelBuilder.Entity("ECommerce.Infrastructure.DataModel.CategoryDto", b =>
+                {
+                    b.HasOne("ECommerce.Infrastructure.DataModel.CategoryDto", "_Parent")
+                        .WithMany("_Children")
+                        .HasForeignKey("Parent");
                 });
 
             modelBuilder.Entity("ECommerce.Infrastructure.DataModel.ItemDto", b =>

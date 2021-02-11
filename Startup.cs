@@ -6,6 +6,14 @@ using ECommerce.Infrastructure;
 using StoreakApiService.Core.Helper;
 using StoreakApiService.Core.Projects;
 using StoreakApiService.Core.Responses;
+using ECommerce.Application.BusinessUseCases.Category;
+using ECommerce.Application.Queries.Category;
+using ECommerce.Application.BusinessUseCases.Item;
+using ECommerce.Application.Queries.Item;
+using ECommerce.Application.BusinessUseCases.Order;
+using ECommerce.Application.Queries.Order;
+using ECommerce.Application.BusinessUseCases.OrderItem;
+using ECommerce.Application.Queries.OrderItem;
 
 namespace ECommerce
 {
@@ -34,6 +42,21 @@ namespace ECommerce
             // Services DI
             services.AddScoped<UnitOfWork>();
 
+            services.AddScoped<ICategoryService, CategoryService>();
+
+            services.AddScoped <CategoryQueries>();
+
+            services.AddScoped<IItemService, ItemService>();
+
+            services.AddScoped<ItemQueries>();
+
+            services.AddScoped<IOrderService, OrderService>();
+
+            services.AddScoped<OrderQueries>();
+
+            services.AddScoped<IOrderItemService, OrderItemService>();
+
+            services.AddScoped<OrderItemQueries>();
             // Responses DI
             services.AddSingleton<IResponseMessages, ResponseMessages>();
 

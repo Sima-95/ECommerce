@@ -55,6 +55,8 @@ namespace ECommerce.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Parent");
+
                     b.ToTable("Categories");
                 });
 
@@ -225,6 +227,13 @@ namespace ECommerce.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("OrderItems");
+                });
+
+            modelBuilder.Entity("ECommerce.Infrastructure.DataModel.CategoryDto", b =>
+                {
+                    b.HasOne("ECommerce.Infrastructure.DataModel.CategoryDto", "_Parent")
+                        .WithMany("_Children")
+                        .HasForeignKey("Parent");
                 });
 
             modelBuilder.Entity("ECommerce.Infrastructure.DataModel.ItemDto", b =>

@@ -11,4 +11,108 @@
     <ar>اسم الصنف مطلوب.</ar>
     <en>Category name required.</en>
   </Message>
+  <Message Code="ECom404CNF" Name="CategoryNotFound" Status="NotFound">
+    <ar>لم يتم العثور على الصنف.</ar>
+    <en>Category not found.</en>
+  </Message>
+  <Message Code="ECom400CHRR" Name="CategoryHasRelatedRecords" Status="BadRequest">
+    <ar>يملك الصنف قيود تابع له.</ar>
+    <en>Category has related records.</en>
+  </Message>
+  <Message Code="ECom200CDS" Name="CategoryDeletedSuccessfully" Status="OK">
+    <ar>تم حذف معلومات الصنف بنجاح.</ar>
+    <en>Category info deleted successfully.</en>
+  </Message>
+  <Message Code="ECom200CUS" Name="CategoryUpdatedSuccessfully" Status="OK">
+    <ar>تم تحديث معلومات الصنف بنجاح.</ar>
+    <en>Category info updated successfully.</en>
+  </Message>
+  <Message Code="ECom400INR" Name="ItemNameRequired" Status="BadRequest">
+    <ar>اسم المنتج مطلوب.</ar>
+    <en>Item name required.</en>
+  </Message>
+  <Message Code="ECom400ICR" Name="ItemCategoryRequired" Status="BadRequest">
+    <ar>صنف المنتج مطلوب.</ar>
+    <en>Item category required.</en>
+  </Message>
+  <Message Code="ECom400IQR" Name="ItemQuantityRequired" Status="BadRequest">
+    <ar>كمية المنتج مطلوبة.</ar>
+    <en>Item quantity required.</en>
+  </Message>
+  <Message Code="ECom400IBPR" Name="ItemBuyPriceRequired" Status="BadRequest">
+    <ar>سعر بيع المنتح مطلوب.</ar>
+    <en>Item buy price required.</en>
+  </Message>
+  <Message Code="ECom404INF" Name="ItemNotFound" Status="NotFound">
+    <ar>لم يتم العثور على ا لمنتج.</ar>
+    <en>Item not found.</en>
+  </Message>
+  <Message Code="ECom400IHRR" Name="ItemHasRelatedRecords" Status="BadRequest">
+    <ar>يملك المنتج قيود تابع له.</ar>
+    <en>Item has related records.</en>
+  </Message>
+  <Message Code="ECom200IDS" Name="ItemDeletedSuccessfully" Status="OK">
+    <ar>تم حذف معلومات المنتج بنجاح.</ar>
+    <en>Item info deleted successfully.</en>
+  </Message>
+  <Message Code="ECom200IUS" Name="ItemUpdatedSuccessfully" Status="OK">
+    <ar>تم تحديث معلومات المتنتج بنجاح.</ar>
+    <en>Item info updated successfully.</en>
+  </Message>
+  <Message Code="ECom404ONF" Name="OrderNotFound" Status="NotFound">
+    <ar>لم يتم العثور على الطلب.</ar>
+    <en>Order not found.</en>
+  </Message>
+  <Message Code="ECom400OHDD" Name="OrderHasRelatedRecords" Status="BadRequest">
+    <ar>يملك الطلب قيود تابع له.</ar>
+    <en>Order has related records.</en>
+  </Message>
+  <Message Code="ECom200ODS" Name="OrderDeletedSuccessfully" Status="OK">
+    <ar>تم حذف معلومات الطلب بنجاح.</ar>
+    <en>Order info deleted successfully.</en>
+  </Message>
+  <Message Code="ECom200OCS" Name="OrderCancelledSuccessfully" Status="OK">
+    <ar>تم إالغاء الطلب بنجاح.</ar>
+    <en>Order cancelled successfully.</en>
+  </Message>
+  <Message Code="ECom404CPNF" Name="CategoryParentNotFound" Status="NotFound">
+    <ar>لم يتم العثور على الصنف الأب.</ar>
+    <en>Category parent not found.</en>
+  </Message>
+  <Message Code="ECom400IO" Name="InvalidOperation" Status="BadRequest">
+    <ar>لا يمكن اجراء هذه العملية.</ar>
+    <en>Invalid operation.</en>
+  </Message>
+  <Message Code="ECom200OOS" Name="OrderOrderedSuccessfully" Status="OK">
+    <ar>تم طلب الطلب بنجاح.</ar>
+    <en>Order was ordered successfully.</en>
+  </Message>
+  <Message Code="ECom200OSS" Name="OrderShippedSuccessfully" Status="OK">
+    <ar>تم شحن الطلب بنجاح.</ar>
+    <en>Order was shipped successfully.</en>
+  </Message>
+  <Message Code="ECom200ODS" Name="OrderDeliveredSuccessfully" Status="OK">
+    <ar>تم ايصال الطلب بنجاح.</ar>
+    <en>Order was delivered successfully.</en>
+  </Message>
+  <Message Code="ECom400IQ" Name="InvalidQunatity" Status="BadRequest">
+    <ar>الكمية غير صالحة.</ar>
+    <en>Order item qunatity invalid.</en>
+  </Message>
+  <Message Code="ECom404OINF" Name="OrderItemNotFound" Status="NotFound">
+    <ar>لم يتم العثور على المنتج في الطلب.</ar>
+    <en>Order item not found.</en>
+  </Message>
+  <Message Code="ECom400IOIQ" Name="InvalidOrderItemQuantity" Status="BadRequest">
+    <ar>الكمية المطلوبة للمنتج غير صالحة.</ar>
+    <en>Invalid order item quantity.</en>
+  </Message>
+  <Message Code="ECom200OIDS" Name="OrderItemDeletedSuccessfully" Status="OK">
+    <ar>تم حذف المنتج من الطلب بنجاح.</ar>
+    <en>Order item deleted successfully.</en>
+  </Message>
+  <Message Code="ECom200OIQUS" Name="OrderItemQuantityUpdatedSuccessfully" Status="OK">
+    <ar>تم تعديل كمية المنتج في الطلب بنجاح.</ar>
+    <en>Order item quantity updated successfully.</en>
+  </Message>
 </Messages>
