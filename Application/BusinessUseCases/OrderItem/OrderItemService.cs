@@ -35,7 +35,6 @@ namespace ECommerce.Application.BusinessUseCases.OrderItem
 
             //Update Order
             orderItemDto.Order.Total -= orderItemDto.Total;
-            await _unitOfWork.SaveChangesAsync();
 
             //Delete Order Item
             _unitOfWork.OrderItemRepository.Remove(orderItemDto);

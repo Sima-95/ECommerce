@@ -35,11 +35,10 @@ namespace ECommerce.Application.BusinessUseCases.Order
             order.OrderStatus = OrderStatus.New;
             order.Total = 0;
             _unitOfWork.OrderRepository.Add(order);
-            await _unitOfWork.SaveChangesAsync();
 
             decimal total = 0;
 
-            //Create Order Items
+            //Update Order Items
             foreach (var orderItem in order.OrderItems)
             {
                 OrderItemDto orderItemDto = _mapper.Map<OrderItemDto>(orderItem);
@@ -59,7 +58,6 @@ namespace ECommerce.Application.BusinessUseCases.Order
                 orderItemDto.OrderId = order.Id;
 
                 total += orderItemDto.Total;
-                await _unitOfWork.SaveChangesAsync();
             }
 
             //update order total
@@ -142,8 +140,6 @@ namespace ECommerce.Application.BusinessUseCases.Order
             orderDto.OrderStatus = OrderStatus.Shipped;
             orderDto.ShipDate = DateTime.Now;
 
-            await _unitOfWork.SaveChangesAsync();
-
             //Decrese Item Qunatity
             var orderItems = _unitOfWork.OrderItemRepository.GetAll().Where(x => x.OrderId == orderDto.Id);
             foreach (OrderItemDto orderItem in orderItems) {
@@ -156,8 +152,9 @@ namespace ECommerce.Application.BusinessUseCases.Order
                     return _responsMessages.InvalidQunatity;
 
                 item.Quantity -= orderItem.Quantity;
-                await _unitOfWork.SaveChangesAsync();
             }
+
+            await _unitOfWork.SaveChangesAsync();
             return _responsMessages.OrderShippedSuccessfully;
         }
 
